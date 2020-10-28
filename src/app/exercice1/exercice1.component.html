@@ -1,0 +1,31 @@
+<div>
+  <input
+    (click)="radioSelected($event.target.value)"
+    type="radio"
+    id="text"
+    name="type"
+    value="text"
+    checked
+  />
+  <label for="text">Texte</label> <br />
+  <input
+    (click)="radioSelected($event.target.value)"
+    type="radio"
+    id="date"
+    name="type"
+    value="date"
+  />
+  <label for="date">Date</label> <br />
+  <input
+    (click)="radioSelected($event.target.value)"
+    type="radio"
+    id="range"
+    name="type"
+    value="range"
+  />
+  <label for="range">Curseur</label> <br />
+</div>
+
+<input [type]="type" />
+
+<p>Vous avez selectionné : {{ type }}</p>
